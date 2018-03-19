@@ -777,35 +777,103 @@ header .headCont {
 }
 
 /* ----------- Panel Discussion page -----------*/
-.panel-1 {
-  padding-top: 150px;
-  padding-bottom: 100px;
-  background-color: #f1f2f2;
-  color: #2B2663;
-}
-.panel-1 .headName,
-.panel-2 .headName,
-.panel-3 .headName  {
-  margin-bottom: 30px;
-  color: #E5404C;
-}
-.panel-p .panel-img,
-.panel-p .panel-desc {
-  padding-top: 30px;
-}
-.panel-p .panel-img img {
-  border-radius: 4px;
-}
-
-.panel-2 {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  color: #2B2663;
-}
-
+.panel-1,
+.panel-2,
 .panel-3 {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: #f1f2f2;
   color: #2B2663;
+}
+.panel-1 {
+  padding-top: 150px;
+}
+.panel-1,
+.panel-3 {
+  background-color: #f1f2f2;
+}
+.panel-desc .headName  {
+  margin-bottom: 30px;
+  /* color: #E5404C; */
+}
+.panel-speaker .headName  {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  /* color: #E5404C; */
+}
+@media (max-width: 768px) {
+  .panel-desc .panel-img {
+    padding-top: 20px;
+  }
+}
+.panel-desc .panel-img {
+  border-radius: 4px;
+}
+
+.panel-speaker .speaker-thumb {
+  width: 100%;
+  position: relative;
+  /* margin-top: 20px; */
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 5px rgba(238, 238, 238, 0.6), -3px -3px 5px rgba(238, 238, 238, 0.6);
+  -webkit-box-shadow: 3px 3px 5px rgba(238, 238, 238, 0.6), -3px -3px 5px rgba(238, 238, 238, 0.6);
+}
+.panel-speaker .speaker-thumb img {
+  width: 100%;
+}
+.panel-speaker .speaker-thumb .speaker-des {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 79px;
+  background: #ffffff;
+  box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.04);
+  overflow: hidden;
+  transition: height 450ms;
+}
+.panel-speaker .speaker-thumb:hover .speaker-des {
+  color: #f1f2f2;
+  height: 100%;
+  background-color: #1CC6C1;
+  padding-top: 35%;
+  opacity: 0.9;
+}
+.panel-speaker .speaker-thumb .speaker-des h3 {
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.panel-speaker .speaker-thumb .speaker-des h4 {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.panel-speaker .speaker-thumb:hover h3,
+.panel-speaker .speaker-thumb:hover h4,
+.panel-speaker .speaker-thumb:hover .social-icon li a {
+    color: #f1f2f2;
+}
+.panel-speaker .social-icon li {
+  list-style: none;
+  display: inline-block;
+}
+.panel-speaker .social-icon li a {
+  border-radius: 100px;
+  color: #626262;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  margin-right: 10px;
+}
+.panel-speaker .social-icon li a:hover {
+  background: #2B2663;
+  color: #f1f2f2;
 }
